@@ -1,21 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerDamage : MonoBehaviour
 {
     [SerializeField] private Character_Base _playerData;
-    
-    private int _health;
+
+    public static int _health;
     
     private bool _canBeDamaged;
     
     private float _timer;
     private float _invincibilityTime = 2f;
 
+    private int _maxHealth;
 
     void Start()
     {
+        _maxHealth = _playerData.characterHealth;
         _health = _playerData.characterHealth;
         _timer = 0f;
         _canBeDamaged = true;
@@ -38,7 +40,8 @@ public class PlayerDamage : MonoBehaviour
             _timer = 0f;
         }
 
-        if(_health <= 0)
+
+        if (_health <= 0)
         {
             Destroy(this.gameObject);
         }
@@ -48,8 +51,8 @@ public class PlayerDamage : MonoBehaviour
         if (collision.CompareTag("Enemy") || collision.CompareTag("DiffEnemy") && _canBeDamaged == true)
         {
             _canBeDamaged = false;
-            print("Took DMg");
             _health-= 1;
+
         }
     }
    
