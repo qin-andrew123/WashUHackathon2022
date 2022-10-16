@@ -1,7 +1,7 @@
 # WashUHackathon2022
 
 ## Where to Download Game
-Follow the Sync.com link. If that doesn't work download the files and in Unity create a new build
+Download the files and in Unity create a new build
 
 ## Controls
 WASD or Arrow keys to move
