@@ -26,5 +26,11 @@ public class Bullet : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, rotZ + 90);
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Walls"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

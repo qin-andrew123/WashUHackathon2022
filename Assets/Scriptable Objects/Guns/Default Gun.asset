@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Default Gun
   m_EditorClassIdentifier: 
   numBullets: 1
-  bulletSpeed: 10
+  bulletSpeed: 20
   angleOfFire: 0
-  damageVal: 2
-  timeBtwnShots: 1.5
+  damageVal: 4
+  timeBtwnShots: 0.1
